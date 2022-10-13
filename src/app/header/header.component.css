@@ -1,0 +1,44 @@
+*{
+  font-family: "Titillium Web", sans-serif;
+}
+
+.logo-home{
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #5CB85C;
+}
+
+.header-right{
+  width: 40% ;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+  transition: 350ms;
+}
+
+a:hover{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  transition: 350ms;
+}
+
+ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+h1{
+  font-size: 2.5rem;
+  font-family: sans-serif;
+}

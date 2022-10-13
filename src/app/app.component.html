@@ -1,0 +1,26 @@
+<app-header></app-header>
+<main>
+  <form style="display: flex; flex-direction: column;  align-items: center; margin-top: 1rem" [formGroup] = "formGroup">
+    <h1 style="margin-bottom: 1rem">Sign in</h1>
+    <p><a href="#">Need an account?</a></p>
+    <div style="width: 300px; display: flex; flex-direction: column;  align-items: center; margin-top: 1rem">
+      <input type="text" placeholder="Email" style="width: 300px; margin-bottom: 12px; padding:4px" formControlName = "emailInput">
+      <input type="password" placeholder="Password" style="width: 300px; margin-bottom: 12px; padding:4px" formControlName = "passwordInput" >
+      <button type="submit" style="align-self: flex-end;" [disabled] = "!formGroup.valid"> Sign in</button>
+    </div>
+  </form>
+  {{ formGroup.valueChanges | async }}
+</main>
+<!-- <main>
+  <form style="display: flex; flex-direction: column;  align-items: center; margin-top: 1rem">
+    <h1 style="margin-bottom: 1rem">Sign in</h1>
+    <p><a href="#">Need an account?</a></p>
+    <div style="width: 300px; display: flex; flex-direction: column;  align-items: center; margin-top: 1rem">
+      <input type="text" placeholder="Email" style="width: 300px; margin-bottom: 12px; padding:4px" [value] = "inputEmailChanged$ | async"
+      (keyup) = "onEmailChange($event)">
+      <input type="password" placeholder="Password" style="width: 300px; margin-bottom: 12px; padding:4px"[value] = "inputPasswordChanged$ | async"
+      (keyup) = "onPasswordChange($event) " >
+      <button type="submit" style="align-self: flex-end;" [disabled] = "buttonDisabled$ | async"> Sign in</button>
+    </div>
+  </form>
+</main> -->
